@@ -54,8 +54,18 @@ const createOrder = async(req,res)=>{
     }
 }
 
+const paymentVerification = async (req, res) => {
+    try{
+        console.log("Payment Verification")
+        console.log(req.body);
+        res.status(200).send({success:true,msg:'Payment Successfull'});
+    } catch (error) {
+        console.log(error.message);
+    }
+}
 
 module.exports = {
     renderProductPage,
-    createOrder
+    createOrder,
+    paymentVerification
 }

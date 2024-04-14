@@ -1,7 +1,9 @@
 require("dotenv").config();
 
-const app = require('express')();
-var http = require('http').Server(app);
+const express = require('express');
+const app = express(); // Use express() to create the app
+
+const http = require('http').Server(app);
 
 const paymentRoute = require('./routes/paymentRoute');
 

@@ -14,5 +14,6 @@ const paymentController = require('../controllers/paymentController');
 
 payment_route.get('/', paymentController.renderProductPage);
 payment_route.post('/createOrder', paymentController.createOrder);
+payment_route.post("/paymentverification", paymentController.paymentVerification);
 
 module.exports = payment_route;
